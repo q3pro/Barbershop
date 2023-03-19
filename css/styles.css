@@ -1,6 +1,8 @@
 :root {
   --main-title-color: #ffffff;
   --second-title-color: #303030;
+  --main-btn-color: #ffffff;
+  --second-btn-color: #303030;
 }
 
 body {
@@ -14,6 +16,29 @@ body {
   text-decoration: none;
 }
 
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+.top-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+}
 /**------------------HEADER----------------*/
 
 .header {
@@ -47,14 +72,7 @@ body {
   color: #ffffff;
 }
 .header-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: #ffffff;
-  cursor: pointer;
 }
 
 /**------------------hero----------------*/
@@ -81,10 +99,6 @@ body {
 .link {
 }
 .hero-top-text {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
 }
 .hero-title {
@@ -93,7 +107,7 @@ body {
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
-  color: var(--main-title-color);
+  color: var(--main-title-color, #ffffff);
 }
 
 .hero-bottom-text {
@@ -113,17 +127,10 @@ body {
 .about-item {
 }
 .about-top-text {
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
   color: #303030;
 }
 .about-title {
-  font-family: "Raleway", sans-serif;
-  font-size: 42px;
-  line-height: 1.16;
-  letter-spacing: 0.05em;
-  color: var(--second-title-color)
+  color: var(--second-title-color);
 }
 .about-bottom-text {
   font-size: 18px;
@@ -133,21 +140,12 @@ body {
 }
 .about-text {
   font-size: 14px;
-line-height: 1.86;
-letter-spacing: 0.02em;
-color: #555555;
-
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
 }
 .about-btn {
-  font-family: inherit;
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 1.33;
-letter-spacing: 0.09em;
-text-transform: uppercase;
-color: #303030;
-cursor: pointer;
+  color: #303030;
 }
 
 /**------------------PRICES----------------*/
@@ -156,19 +154,10 @@ cursor: pointer;
   background-color: #303030;
 }
 .prices-top-text {
-  font-weight: 600;
-  font-size: 11px;
-line-height: 1.36;
-text-transform: uppercase;
-color: rgba(157, 164, 189, 0.6);
-
+  color: rgba(157, 164, 189, 0.6);
 }
 .prices-title {
-font-family: 'Raleway', sans-serif;
-font-size: 42px;
-line-height: 1.67;
-letter-spacing: 0.05em;
-color: var(--main-title-color);
+  color: var(--main-title-color);
 }
 .prices-list {
 }
@@ -176,19 +165,74 @@ color: var(--main-title-color);
 }
 .prices-item-text {
   font-size: 18px;
-line-height: 1.67;
-letter-spacing: 0.02em;
-color: #9DA4BD;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
 }
 
 .prices-btn {
-  font-family: inherit;
-font-weight: 600;
-font-size: 12px;
-line-height: 1.33;
-letter-spacing: 0.09em;
-text-transform: uppercase;
-color: #FFFFFF;
-cursor: pointer;
+  color: #ffffff;
+}
+
+/**------------------benefits----------------*/
+
+.benefits {
+}
+.benefits-list {
+}
+
+.benefits-item.count {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+
+.benefits-item-text {
+}
+.benefits-top-text {
+  color: #303030;
+}
+.benefits-title {
+  color: #303030;
+}
+.benefits-bottom-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+/**------------------BARBERS----------------*/
+.barbers {
+}
+
+.barbers-top-text {
+  color: #303030;
+}
+.barbers-title {
+  color: var(--second-title-color);
+}
+.barbers-list {
+}
+.barbers-item {
+}
+.barbers-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #303030;
+}
+.barbers-item-text {
+  font-size: 14px;
+line-height: 1.36;
+text-align: center;
+letter-spacing: 0.02em;
+color: #FF6C00;
 
 }
