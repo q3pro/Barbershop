@@ -252,17 +252,35 @@ margin-right: 30px;
 }
 .prices-top-text {
   color: rgba(157, 164, 189, 0.6);
+  padding-bottom: 20px;
 }
 
 .prices-title {
   color: var(--main-title-color);
+  padding-bottom: 44px;
+}
+
+.prices-wrap {
+display: flex;  
+gap: 30px;
+margin-bottom: 44px;
 }
 .prices-list {
+  border: 1px solid #ffffff;
+  width: calc((100%-30px) /2);
+  padding: 30px 20px;
 }
 .list {
 }
 
 .prices-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.prices-item:last-child {
+  margin-bottom: 0;
 }
 .prices-item-text {
   font-size: 18px;
@@ -272,6 +290,8 @@ margin-right: 30px;
 }
 .prices-btn {
   color: #ffffff;
+  display: block;
+  margin: 0 auto;
 }
 
 /** -----------------------BENEFITS---------------------- */
@@ -318,16 +338,21 @@ margin-right: 30px;
 }
 .barbers-top-text {
   color: #303030;
+  margin-bottom: 20px;
 }
 
 .barbers-title {
   color: var(--second-title-color);
+  margin-bottom: 44px;
 }
 
 .barbers-list {
+  display: flex;
+  gap: 30px;
 }
 
 .barbers-item {
+  width: calc((100% - 60px) / 3);
 }
 .barbers-subtitle {
   font-weight: 400;
@@ -346,4 +371,15 @@ margin-right: 30px;
   text-align: center;
   letter-spacing: 0.02em;
   color: #ff6c00;
+}
+
+
+.gallary-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gallary-list li {
+  width: calc((100% - 90px) / 4);
 }
