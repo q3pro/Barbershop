@@ -3,6 +3,7 @@
   --second-title-color: #303030;
   --main-btn-color: #ffffff;
   --second-btn-color: #303030;
+  --bg-gradient: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
 }
 
 p,
@@ -62,9 +63,9 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
-  border: 1px solid #FF6C00;
-border-radius: 25px;
-background-color: transparent;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
 }
 
 .title {
@@ -110,7 +111,7 @@ background-color: transparent;
 
 .header-list {
   display: flex;
-gap: 30px;
+  gap: 30px;
 }
 
 /* .header-item {
@@ -148,7 +149,6 @@ margin-right: 30px;
 /** -----------------------HERO---------------------- */
 
 .hero {
-  
 }
 
 .hero-container {
@@ -157,6 +157,10 @@ margin-right: 30px;
 
 .hero-wrap {
   background-color: #7e8291;
+  background-image: var(--bg-gradient), url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   flex-grow: 1;
   padding: 272px 100px 208px 100px;
 }
@@ -182,7 +186,6 @@ margin-right: 30px;
 .hero-top-text {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: 29px;
-
 }
 .hero-title {
   font-family: "Raleway", sans-serif;
@@ -190,7 +193,7 @@ margin-right: 30px;
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--main-title-color);
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 
 .hero-bottom-text {
@@ -209,9 +212,9 @@ margin-right: 30px;
 
 .about-wrap {
   padding-right: 100px;
- }
+}
 
- .about-list {
+.about-list {
   display: flex;
   gap: 30px;
 }
@@ -231,24 +234,23 @@ margin-right: 30px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #555555;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 .about-text {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
-  margin-bottom: 42px
+  margin-bottom: 42px;
 }
 .about-btn {
   color: #303030;
-  }
+}
 
 /** -----------------------PRICES---------------------- */
 
 .prices {
   background-color: #303030;
-  
 }
 .prices-top-text {
   color: rgba(157, 164, 189, 0.6);
@@ -261,13 +263,13 @@ margin-right: 30px;
 }
 
 .prices-wrap {
-display: flex;  
-gap: 30px;
-margin-bottom: 44px;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 44px;
 }
 .prices-list {
   border: 1px solid #ffffff;
-  width: calc((100%-30px) /2);
+  width: calc((100%-30px) / 2);
   padding: 30px 20px;
 }
 .list {
@@ -372,7 +374,6 @@ margin-bottom: 44px;
   letter-spacing: 0.02em;
   color: #ff6c00;
 }
-
 
 .gallary-list {
   display: flex;
