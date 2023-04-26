@@ -399,20 +399,19 @@ margin-right: 30px;
   border-radius: 50%;
   background-color: tomato;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
-  color:#ffffff;
+  fill: #ffffff;
 }
 
-.barbers-soc-icon {
+/* .barbers-soc-icon {
 fill: currentColor;
-}
+} */
 
 .barbers-soc-link:hover {
   background-color: teal;
-  color:violet;
+  fill: violet;
 }
-
 
 /* .barbers-soc-link:hover {
   background-color: teal;
