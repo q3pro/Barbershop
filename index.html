@@ -46,7 +46,7 @@
         <a class="header-phone link" href="tel:+380441111111"
           >+38 044 111 11 11</a
         >
-        <button class="header-btn btn" type="submit">Online-booking</button>
+        <button class="header-btn btn" data-modal-open type="submit">Online-booking</button>
       </div>
     </header>
     <main>
@@ -357,11 +357,12 @@
         </li>
       </ul>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button tape="button" class="modal-close-btn">X</button>
+        <button tape="button" data-modal-close class="modal-close-btn">X</button>
       </div>
     </div>
+    <script src="./js/modle.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
