@@ -18,6 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="./css/styles.css" rel="stylesheet" />
   </head>
   <body>
@@ -51,29 +52,31 @@
     <main>
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-soc">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
           <div class="hero-wrap">
             <p class="hero-top-text top-text">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title">BarberShop</h1>
+            <h1 class="hero-title" data-aos="flip-right">BarberShop</h1>
             <p class="hero-bottom-text">
               We are experts in trendy men’s haircuts. We work quickly,
               carefully and with style.
@@ -103,7 +106,9 @@
           </ul>
           <div class="about-wrap">
             <p class="about-top-text top-text">About</p>
-            <h2 class="about-title title">Best Barbershop in your city</h2>
+            <h2 class="about-title title" data-aos="fade-up">
+              Best Barbershop in your city
+            </h2>
             <p class="about-bottom-text">
               If you want to add more confidence to your image, you should
               definitely visit us.
@@ -124,7 +129,9 @@
           <p class="prices-top-text top-text">
             Spend your time with the best masters
           </p>
-          <h2 class="prices-title title">Services and prices</h2>
+          <h2 class="prices-title title" data-aos="zoom-out-up">
+            Services and prices
+          </h2>
           <div class="prices-wrap">
             <ul class="prices-list list">
               <li class="prices-item">
@@ -204,12 +211,21 @@
           <h2 class="barbers-title title">Our barbers</h2>
           <ul class="barbers-list list">
             <li class="barbers-item">
-              <img
-                src="./images/barbers-img-1.jpeg"
-                alt="barbers photo"
-                width="370"
-                height="346"
-              />
+              <div class="barbers-cover-wrap">
+                <img
+                  src="./images/barbers-img-1.jpeg"
+                  alt="barbers photo"
+                  width="370"
+                  height="346"
+                />
+                <p class="barber-cover-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Minima, quos exercitationem ut nihil sunt, iste distinctio
+                  recusandae corporis fugiat asperiores, accusamus magnam
+                  consequuntur dignissimos debitis necessitatibus ad autem dolorum
+                  optio!
+                </p>
+              </div>
               <div class="barbers-item-wrap">
                 <h3 class="barbers-subtitle">John Smith</h3>
                 <p class="barbers-item-text">Extreme Barber</p>
@@ -341,5 +357,9 @@
         </li>
       </ul>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

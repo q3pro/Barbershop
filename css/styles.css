@@ -38,7 +38,7 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 body {
@@ -66,6 +66,12 @@ body {
   border: 1px solid #ff6c00;
   border-radius: 25px;
   background-color: transparent;
+  transition: background-color 300ms linear, color 300ms linear;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: #ff6c00;
+  color: #ffffff;
 }
 
 .title {
@@ -103,8 +109,10 @@ body {
 /** -----------------------HEADER---------------------- */
 
 .header {
-  background-color: gray;
+  /* background-color: gray; */
+  position: absolute;
   padding-top: 32px;
+  width: 100%;
 }
 
 .header-container {
@@ -140,6 +148,7 @@ margin-right: 30px;
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
+  transition: color 300ms linear;
 }
 
 .header-link:is(:hover, :focus) {
@@ -178,8 +187,27 @@ margin-right: 30px;
   padding: 272px 100px 208px 100px;
 }
 
-.hero-list {
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+
+.hero-list {
+  align-items: center;
+  display: flex;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+  gap: 30px;
+}
+
+.hero-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 
 .hero-item {
@@ -399,7 +427,7 @@ margin-right: 30px;
   height: 133px;
   width: 170px;
   padding: 20px 24px;
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 
 .benefits-item:nth-child(odd) {
@@ -475,9 +503,25 @@ margin-right: 30px;
   gap: 30px;
 }
 
+.barbers-cover-wrap {
+  position: relative;
+}
+
 .barbers-item {
   width: calc((100% - 60px) / 3);
 }
+
+.barber-cover-text {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #ff6c00;
+  padding: 40px;
+  height: 100%;
+}
+
 .barbers-subtitle {
   font-weight: 400;
   font-size: 18px;
@@ -523,16 +567,18 @@ margin-right: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #ffffff;
+  color: white;
+  /* fill: #ffffff; */
+  transition: background-color 300ms linear, color 300ms linear;
 }
 
-/* .barbers-soc-icon {
-fill: currentColor;
-} */
+.barbers-soc-icon {
+  fill: currentColor;
+}
 
 .barbers-soc-link:hover {
   background-color: teal;
-  fill: violet;
+  color: violet;
 }
 
 /* .barbers-soc-link:hover {
