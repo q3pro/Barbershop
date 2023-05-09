@@ -505,10 +505,15 @@ margin-right: 30px;
 
 .barbers-cover-wrap {
   position: relative;
+  overflow: hidden;
 }
 
 .barbers-item {
   width: calc((100% - 60px) / 3);
+}
+
+.barbers-item:hover .barber-cover-text {
+  transform: translate(0);
 }
 
 .barber-cover-text {
@@ -520,6 +525,8 @@ margin-right: 30px;
   background-color: #ff6c00;
   padding: 40px;
   height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
 }
 
 .barbers-subtitle {
@@ -598,4 +605,38 @@ margin-right: 30px;
 
 .gallary-list li {
   width: calc((100% - 90px) / 4);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 26, 36, 0.473);
+}
+
+.modal {
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+.modal-close-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999999;
+  background-color: transparent;
+  border-radius: 50%;
+  /* position: absolute;
+  top: 20px;
+  right: 20px; */
+  display: block;
+  margin-left: auto;
+
 }
