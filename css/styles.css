@@ -624,12 +624,12 @@ margin-right: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1) rotate(0);
   transition: transform 300ms linear;
   padding: 20px;
 }
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scaleY(0);
+  transform: translate(-50%, -50%) scaleY(0)  rotate(-90deg);
 }
 
 .modal-close-btn {
