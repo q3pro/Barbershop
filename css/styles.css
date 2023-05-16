@@ -692,9 +692,9 @@ color: tomato;
 font-size: 12px;
 }
 
-.modal-input:not(:placeholder-shown):valid {
+.modal-input:not(:focus):not(:placeholder-shown):valid {
   background-color: rgba(0, 128, 0, 0.425);
 }
-.modal-input:not(:placeholder-shown):invalid {
+.modal-input:not(:focus):not(:placeholder-shown):invalid {
   background-color:rgba(128, 41, 0, 0.425);
 }
