@@ -396,11 +396,35 @@
         </li>
       </ul>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-close-btn" data-modal-close type="button">
           X
         </button>
+        <p class="modal-titel">Modal-titel</p>
+        <form class="modal-form">
+          <input
+            type="text"
+            name="user-name"
+            class="modal-input"
+            placeholder="Enter name*"
+            required
+          />
+          <input
+            type="email"
+            name="user-email"
+            class="modal-input"
+            placeholder="Enter email"
+          />
+          <input
+            type="tel"
+            name="user-tel"
+            class="modal-input"
+            placeholder="Enter phone*"
+            required        
+          />
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
