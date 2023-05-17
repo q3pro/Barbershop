@@ -680,6 +680,8 @@ body {
   margin-bottom: 10px;
 }
 
+
+
 .input-wrap {
   position: relative;
 }
@@ -753,4 +755,27 @@ body {
   display: inline-block;
   font-size: 12px;
   margin-bottom: 5px;
+}
+
+.check-test {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.check-test::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  margin-right: 10px;
+}
+
+.input-check:checked + .check-test::before {
+  background-color: orange;
+  border:none;
+  background-image: url(../images/Vector.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }

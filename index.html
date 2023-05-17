@@ -402,7 +402,6 @@
           X
         </button>
         <p class="modal-titel">Modal-titel</p>
-
         <form class="modal-form">
           <label class="modal-lable">
             <span>Enter name*</span>
@@ -454,21 +453,15 @@
               placeholder="Comment"
             ></textarea>
           </div>
-
           <div class="modal-fild">
-            <label for="user-city" class="input-text">Enter city </label>
-            <div class="input-wrap">
-              <select
-                name="user-city"
-                id="user-city"
-                class="modal-input"
-                multiple
-              >
-              <option value="london">London</option>
-              <option value="paris">Paris</option>
-              <option value="novyi-rozdi">Novyi Rozdil</option>
-            </select>
-            </div>
+            <input
+              type="checkbox"
+              name="privacy"
+              id="privacy"
+              class="input-check visually-hidden"
+              value="tru"
+            />
+            <label for="privacy" class="check-test">Privacy policy <a href="">agree</a></label>
           </div>
           <button type="submit">Send</button>
         </form>
