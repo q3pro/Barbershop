@@ -31,10 +31,13 @@ address {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .list {
@@ -63,7 +66,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -91,7 +94,7 @@ body {
 }
 
 .title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
@@ -108,7 +111,7 @@ body {
 }
 
 .top-text::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 1px;
   background-color: currentColor;
@@ -117,8 +120,10 @@ body {
   margin-right: 20px; */
 }
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+padding-top: 84px;
+padding-bottom: 84px;
 }
 
 /** -----------------------HEADER---------------------- */
@@ -187,7 +192,7 @@ body {
 }
 
 .current::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -52px;
@@ -232,7 +237,7 @@ body {
 }
 
 .hero-list::before {
-  content: '';
+  content: "";
   width: 60px;
   height: 1px;
   background-color: #303030;
@@ -257,7 +262,7 @@ body {
   margin-bottom: 20px;
 }
 .hero-title {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
@@ -267,7 +272,7 @@ body {
   align-items: baseline; */
 }
 .hero-title::before {
-  content: '';
+  content: "";
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -277,7 +282,7 @@ body {
 }
 
 .hero-title::after {
-  content: '';
+  content: "";
   color: teal;
 }
 
@@ -391,7 +396,7 @@ body {
 }
 
 .prices-item::before {
-  content: '';
+  content: "";
   width: 100px;
   height: 1px;
   background-color: rgba(157, 164, 189, 0.12);
@@ -467,7 +472,7 @@ body {
 }
 
 .benefits-item .count::after {
-  content: '+';
+  content: "+";
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
@@ -613,17 +618,21 @@ body {
 } */
 
 /** -----------------------GALLERY---------------------- */
+.gallary-top-text {
+  margin-bottom: 71px;
+}
 
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px 30px;
+  gap: 30px;
   /* row-gap: 50px;
   column-gap: 30px; */
 }
 
 .gallery-list li {
-  flex-basis: calc((100% - 90px) / 4);
+  /* flex-basis: calc((100% - 90px) / 4); */
+  flex-basis: 100%;
 }
 
 .contact-wrap {
@@ -919,3 +928,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 } */
+
+@media screen and (min-width:480px) {
+  .container {
+    width: 448px;
+  }
+}
