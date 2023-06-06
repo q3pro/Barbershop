@@ -31,13 +31,13 @@ address {
 
 img {
   display: block;
-  width: 100%;
-  height: auto;
   max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .list {
@@ -94,7 +94,7 @@ body {
 }
 
 .title {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
@@ -111,7 +111,7 @@ body {
 }
 
 .top-text::before {
-  content: "";
+  content: '';
   width: 60px;
   height: 1px;
   background-color: currentColor;
@@ -147,44 +147,13 @@ body {
 
 .header-logo {
   margin-right: 130px;
+  background-color: #ffffff;
 }
 
-.header-list {
-  display: flex;
-  gap: 30px;
-}
-
-/* .header-item {
-  margin-right: 30px;
-}
-
-.header-item:last-child {
-  margin-right: 0;
-} */
-.header-link {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  color: #ffffff;
-  transition: color 300ms linear;
-}
-
-.header-link:is(:hover, :focus) {
-  color: #ff6c00;
-}
-
-.header-phone {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-right: 43px;
-}
+.header-list,
+.header-phone,
 .header-btn {
-  color: #ffffff;
+  display: none;
 }
 
 .current {
@@ -192,7 +161,7 @@ body {
 }
 
 .current::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -52px;
@@ -202,17 +171,88 @@ body {
   background-color: #ff6c00;
 }
 
+.mob-menu {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 48px 31px 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+.mob-menu-list {
+  margin-bottom: 64px;
+}
+
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.mob-menu-link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+
+.mob-menu-phone {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+}
+.mob-menu-btn {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 64px;
+}
+
+.mob-soc-list {
+}
+.mob-soc-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.mob-soc-link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+
 /** -----------------------HERO---------------------- */
 
 .hero {
-  background-image: var(--bg-gradient), url(../images/hero-bg.jpeg);
+  background-image: var(--bg-gradient), url(../images/hero-bg-mob.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--bg-gradient), url(../images/hero-bg-mob-2x.jpeg);
+  }
+}
+
 .hero-container {
   display: flex;
+}
+
+.hero-soc {
+  display: none;
 }
 
 .hero-wrap {
@@ -220,16 +260,12 @@ body {
   padding: 210px 0;
 }
 
-.hero-soc {
- display: none;
-}
-
 .hero-top-text {
   color: rgba(157, 164, 189, 0.6);
   margin-bottom: 20px;
 }
 .hero-title {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 46px;
   line-height: 1.17;
   letter-spacing: 0.05em;
@@ -239,7 +275,7 @@ body {
   align-items: baseline; */
 }
 /* .hero-title::before {
-  content: "";
+  content: '';
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -249,7 +285,7 @@ body {
 }
 
 .hero-title::after {
-  content: "";
+  content: '';
   color: teal;
 } */
 
@@ -363,7 +399,7 @@ body {
 }
 
 .prices-item::before {
-  content: "";
+  content: '';
   width: 100px;
   height: 1px;
   background-color: rgba(157, 164, 189, 0.12);
@@ -439,7 +475,7 @@ body {
 }
 
 .benefits-item .count::after {
-  content: "+";
+  content: '+';
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
@@ -475,8 +511,6 @@ body {
 
 /** -----------------------BARBERS---------------------- */
 
-.barbers {
-}
 .barbers-top-text {
   color: #303030;
   margin-bottom: 20px;
@@ -489,16 +523,14 @@ body {
 
 .barbers-list {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .barbers-item {
   /* width: calc((100% - 60px) / 3); */
   width: 100%;
 }
-
-
 .barbers-item:hover .barbers-cover-text {
   transform: translate(0);
 }
@@ -589,8 +621,10 @@ body {
 } */
 
 /** -----------------------GALLERY---------------------- */
-.gallary-top-text {
-  margin-bottom: 44px;
+
+.gallery-top-text {
+  /* margin-bottom: 44px; */
+  margin-bottom: 71px;
 }
 
 .gallery-list {
@@ -694,6 +728,7 @@ body {
 .backdrop {
   position: fixed;
   top: 0;
+  z-index: 3;
   width: 100%;
   height: 100%;
   background-color: rgba(23, 26, 36, 0.432);
@@ -899,106 +934,3 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 } */
-
-@media screen and (min-width: 480px) {
-  .container {
-    width: 448px;
-  }
-  .hero-title {
-    font-size: 48px;
-  }
-  
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    width: 720px;
-  }
-
-  .section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  .hero {
-    background-image: unset;
-  }
-
-  .hero-soc {
-  
-    width: 100px;
-    display: flex;
-    align-items: flex-end;
-    padding-left: 27px;
-    padding-bottom: 40px;
-   
-  }
-  .hero-list {
-    display: flex;
-    align-items: center;
-    transform: rotate(-90deg) translateY(100%);
-    transform-origin: bottom left;
-    gap: 40px;
-  }
-  
-  .hero-list::before {
-    content: "";
-    width: 60px;
-    height: 1px;
-    background-color: #303030;
-  }
-  
-  
-  .hero-link {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.2em;
-    color: #303030;
-  }
-  
-  .hero-link:is(:hover, :focus) {
-    color: #ff6c00;
-  }
-
-  .hero-wrap {
-    background-image: var(--bg-gradient), url(../images/hero-bg.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 272px 98px 237px;
-
-  }
-   
-  .gallery-list li {
-    flex-basis: calc((100% - 30px) / 2);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
-
-
-
-  .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-    .gallery-list li {
-      flex-basis: calc((100% - 90px) / 4);
-    }
-    .barbers-item {
-      width: calc((100% - 60px) / 3);
-
-  }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .barbers > .container {
-    width: 480px;
-  }
-  }
